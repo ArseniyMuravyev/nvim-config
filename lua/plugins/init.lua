@@ -37,6 +37,12 @@ return {
         "vimdoc",
         "html",
         "css",
+        "typescript",
+        "javascript",
+        "tsx",
+      },
+      highlight = {
+        enable = true,
       },
     },
   },
