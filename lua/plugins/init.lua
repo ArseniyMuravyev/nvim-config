@@ -122,11 +122,6 @@ return {
         view = {
           width = 23,
           side = "left",
-          mappings = {
-            list = {
-              { key = "A", action = "create" },
-            },
-          },
         },
       }
     end,
