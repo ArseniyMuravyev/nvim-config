@@ -10,9 +10,6 @@ M.ui = {
   shiftwidth = 2, -- Number of spaces to use for each step of (auto)indent
   expandtab = true, -- Use spaces instead of tabs
   softtabstop = 2,
-  Comment = { italic = true },
-  ["@comment"] = { italic = true },
-  -- },
   statusline = {
     theme = "minimal",
     separator_style = "round",
