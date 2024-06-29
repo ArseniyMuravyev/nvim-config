@@ -120,7 +120,7 @@ return {
           dotfiles = false,
         },
         view = {
-          width = 23,
+          width = 25,
           side = "left",
         },
       }
@@ -148,6 +148,7 @@ return {
         mapping = {
           ["<CR>"] = cmp.mapping.confirm { select = true },
           ["<Tab>"] = cmp.mapping(cmp.mapping.select_next_item(), { "i", "s" }),
+          ["<S-Tab>"] = cmp.mapping(cmp.mapping.select_prev_item(), { "i", "s" }), -- Добавлено для перемещения к предыдущему элементу
         },
         sources = cmp.config.sources {
           { name = "nvim_lsp" },
@@ -159,6 +160,10 @@ return {
         },
         experimental = {
           ghost_text = true,
+        },
+        completion = {
+          completeopt = "menu,menuone,noinsert,noselect", -- Параметры автодополнения
+          keyword_length = 0, -- Минимальная длина ключевого слова для появления подсказок
         },
       }
       cmp.setup.cmdline("/", {

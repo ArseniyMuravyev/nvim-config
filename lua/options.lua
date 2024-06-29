@@ -1,7 +1,11 @@
 require "nvchad.options"
 
--- add yours here!
-
 local o = vim.o
-o.cursorlineopt = "both" -- to enable cursorline!
+
+o.wrap = true
+o.linebreak = true
+o.colorcolumn = "80"
+o.breakindent = true
+o.breakindentopt = "shift:2"
+o.cursorlineopt = "both"
 o.swapfile = false
