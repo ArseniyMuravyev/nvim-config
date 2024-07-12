@@ -6,7 +6,7 @@ local capabilities = configs.capabilities
 
 local lspconfig = require "lspconfig"
 
-local servers = { "html", "cssls", "tsserver" }
+local servers = { "html", "cssls", "tsserver", "pyright" }
 
 local function organize_imports()
   local params = {
@@ -38,3 +38,9 @@ for _, lsp in ipairs(servers) do
   }
   lspconfig.prismals.setup {}
 end
+
+lspconfig.pyright.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+  filetypes = { "python" },
+}
