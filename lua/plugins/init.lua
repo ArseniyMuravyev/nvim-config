@@ -20,7 +20,6 @@ return {
       ensure_installed = {
         "lua-language-server",
         "stylua",
-        "html-lsp",
         "css-lsp",
         "prettier",
         "typescript-language-server",
@@ -178,7 +177,7 @@ return {
           ghost_text = true,
         },
         completion = {
-          completeopt = "menu,menuone,noinsert,noselect", 
+          completeopt = "menu,menuone,noinsert,noselect",
           keyword_length = 0, -- Минимальная длина ключевого слова для появления подсказок
         },
       }
@@ -204,5 +203,5 @@ return {
         }),
       })
     end,
-  }
+  },
 }
