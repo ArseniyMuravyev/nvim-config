@@ -30,13 +30,11 @@ return {
     },
   },
   {
-    "nvim-treesitter/nvim-treesitter",
+     "nvim-treesitter/nvim-treesitter",
     opts = {
       ensure_installed = {
         "vim",
         "lua",
-        "vimdoc",
-        "html",
         "css",
         "typescript",
         "javascript",
@@ -61,10 +59,14 @@ return {
       }
     end,
   },
-  {
-    "Exafunction/codeium.vim",
-    lazy = false,
-  },
+{
+  "Exafunction/codeium.vim",
+  lazy = false,
+  ft = {"python"},
+  lua = function()
+    vim.cmd([[lua require("codeium").disable()]])
+  end
+},
   {
     "mfussenegger/nvim-lint",
     event = "VeryLazy",
@@ -86,13 +88,6 @@ return {
     end,
   },
   {
-    "max397574/better-escape.nvim",
-    event = "InsertEnter",
-    config = function()
-      require("better_escape").setup()
-    end,
-  },
-  {
     "kyazdani42/nvim-tree.lua",
     config = function()
       require("nvim-tree").setup {
@@ -100,13 +95,6 @@ return {
           dotfiles = false,
         },
       }
-    end,
-  },
-  {
-    "ggandor/leap.nvim",
-    lazy = false,
-    config = function()
-      require("leap").add_default_mappings(true)
     end,
   },
   {
