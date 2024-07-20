@@ -20,7 +20,6 @@ return {
       ensure_installed = {
         "lua-language-server",
         "stylua",
-        "css-lsp",
         "prettier",
         "typescript-language-server",
         "eslint-lsp",
@@ -30,7 +29,7 @@ return {
     },
   },
   {
-     "nvim-treesitter/nvim-treesitter",
+    "nvim-treesitter/nvim-treesitter",
     opts = {
       ensure_installed = {
         "vim",
@@ -59,14 +58,14 @@ return {
       }
     end,
   },
-{
-  "Exafunction/codeium.vim",
-  lazy = false,
-  ft = {"python"},
-  lua = function()
-    vim.cmd([[lua require("codeium").disable()]])
-  end
-},
+  {
+    "Exafunction/codeium.vim",
+    lazy = false,
+    ft = { "python" },
+    lua = function()
+      vim.cmd [[lua require("codeium").disable()]]
+    end,
+  },
   {
     "mfussenegger/nvim-lint",
     event = "VeryLazy",
@@ -94,6 +93,11 @@ return {
         filters = {
           dotfiles = false,
         },
+        git = {
+          enable = true,
+          ignore = false,
+          timeout = 500,
+        },
       }
     end,
   },
@@ -111,21 +115,6 @@ return {
         "<leader>xx",
         "<cmd>Trouble diagnostics toggle<cr>",
         desc = "Diagnostics (Trouble)",
-      },
-      {
-        "<leader>xX",
-        "<cmd>Trouble diagnostics toggle filter.buf=0<cr>",
-        desc = "Buffer Diagnostics (Trouble)",
-      },
-      {
-        "<leader>cs",
-        "<cmd>Trouble symbols toggle focus=false<cr>",
-        desc = "Symbols (Trouble)",
-      },
-      {
-        "<leader>cl",
-        "<cmd>Trouble lsp toggle focus=false win.position=right<cr>",
-        desc = "LSP Definitions / references / ... (Trouble)",
       },
     },
   },
