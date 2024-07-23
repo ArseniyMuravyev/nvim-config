@@ -6,7 +6,7 @@ local capabilities = configs.capabilities
 
 local lspconfig = require "lspconfig"
 
-local servers = { "pyright" }
+local servers = { "pyright", "tsserver", "html" }
 
 local function organize_imports()
   local params = {
@@ -24,15 +24,6 @@ for _, lsp in ipairs(servers) do
       OrganizeImports = {
         organize_imports,
         description = "Organize Imports",
-      },
-    },
-    settings = {
-      gopls = {
-        completeUnimported = true,
-        usePlaceholders = true,
-        analyses = {
-          unusedparams = true,
-        },
       },
     },
   }

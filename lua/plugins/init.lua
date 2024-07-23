@@ -24,7 +24,7 @@ return {
         "typescript-language-server",
         "eslint-lsp",
         "prettier",
-        "pyright",
+        "eslint_d",
       },
     },
   },
