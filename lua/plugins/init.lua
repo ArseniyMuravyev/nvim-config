@@ -16,29 +16,12 @@ return {
   },
   {
     "williamboman/mason.nvim",
-    opts = {
-      ensure_installed = {
-        "lua-language-server",
-        "stylua",
-        "prettier",
-        "typescript-language-server",
-        "eslint-lsp",
-        "prettier",
-        "eslint_d",
-      },
-    },
+    opts = {},
   },
   {
     "nvim-treesitter/nvim-treesitter",
     opts = {
-      ensure_installed = {
-        "vim",
-        "lua",
-        "css",
-        "typescript",
-        "javascript",
-        "tsx",
-      },
+      ensure_installed = {},
       highlight = {
         enable = true,
       },
@@ -74,12 +57,6 @@ return {
     end,
   },
   {
-    "neovim/nvim-lspconfig",
-    config = function()
-      require "configs.lspconfig"
-    end,
-  },
-  {
     "windwp/nvim-ts-autotag",
     event = "VeryLazy",
     config = function()
@@ -96,7 +73,6 @@ return {
         git = {
           enable = true,
           ignore = false,
-          timeout = 500,
         },
       }
     end,
@@ -155,7 +131,7 @@ return {
         },
         completion = {
           completeopt = "menu,menuone,noinsert,noselect",
-          keyword_length = 0, -- Минимальная длина ключевого слова для появления подсказок
+          keyword_length = 0,
         },
       }
       cmp.setup.cmdline("/", {
