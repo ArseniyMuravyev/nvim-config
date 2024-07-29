@@ -7,6 +7,7 @@ M.treesitter = {
     "javascript",
     "typescript",
     "tsx",
+    "css",
   },
   indent = {
     enable = true,
@@ -19,6 +20,8 @@ M.mason = {
     "typescript-language-server",
     "prettier",
     "eslint_d",
+    "css-lsp",
+    "emmet-language-server",
   },
 }
 
