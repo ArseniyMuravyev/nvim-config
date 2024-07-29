@@ -6,8 +6,7 @@ local capabilities = configs.capabilities
 
 local lspconfig = require "lspconfig"
 
-local servers =
-  { "pyright", "tsserver", "cssls", "emmet_language_server", "tailwindcss", "prismals", "emmet_ls", "dockerls" }
+local servers = { "pyright", "tsserver", "cssls", "emmet_language_server", "tailwindcss", "prismals", "dockerls" }
 
 local function organize_imports()
   local params = {
